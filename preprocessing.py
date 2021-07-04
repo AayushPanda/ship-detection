@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 data = pd.DataFrame(pd.read_csv("data\\data_segmentations.csv"))
 data_dir = "data\\images\\"
 
-nData = 2000
+nData = 4000
 
 imageX = 768
 imageY = 768

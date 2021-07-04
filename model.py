@@ -6,7 +6,7 @@ from preprocessing import x_train, x_test, y_train, y_test
 
 # Defining constants
 batch_size = 8
-train_epochs = 10
+train_epochs = 5
 save_model = True
 
 data = pd.DataFrame(pd.read_csv("data\\data_segmentations.csv"))
@@ -29,6 +29,8 @@ history = model.fit(x_train,
 
 if save_model:
     model.save('model.h5')
+
+print("Done training in: ")
 
 # Plot the metrics during training
 accuracy = model.evaluate(x_test, y_test)
@@ -67,3 +69,6 @@ plt.show()
 
 # plt.imshow(gen_mask('000155de5.jpg'))
 # plt.show()
+
+
+# 372s 465ms/sample - loss: 5.6272e-05 - mse: 3.4308e-09
